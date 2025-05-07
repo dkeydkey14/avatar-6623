@@ -14,6 +14,16 @@ export default function Header() {
           </a>
         </div>
         <div className="flex items-center space-x-1 xs:space-x-2 sm:space-x-4">
+          <a href="https://t.me/thongbaochinhthuc6623" className="hidden sm:block transition-transform duration-200 hover:scale-105 hover:drop-shadow-lg">
+            <img
+              src="/images/tb.png"
+              alt="Thông báo"
+              className="h-6 sm:h-9 md:h-10"
+              style={{
+                animation: 'pulse-scale 2.5s infinite alternate',
+              }}
+            />
+          </a>
           <a href="https://www.6623wbs.xyz/home/event?eventCurrent=10003" className="block transition-transform duration-200 hover:scale-105 hover:drop-shadow-lg">
             <img
               src="/images/dang-nhap.png"
@@ -36,6 +46,18 @@ export default function Header() {
           </a>
         </div>
       </div>
+      <a
+        href="https://t.me/thongbaochinhthuc6623"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-2 left-2 w-[81px] h-[81px] block sm:hidden z-50"
+      >
+        <img
+          src="/images/kenh-thon-gbao.gif"
+          alt="Kênh thông báo"
+          className="w-full h-full"
+        />
+      </a>
     </header>
   );
 }
