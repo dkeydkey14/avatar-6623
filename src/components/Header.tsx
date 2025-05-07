@@ -9,7 +9,7 @@ export default function Header() {
             <img
               src="/images/Untitled-7 (3).png"
               alt="Logo"
-              className="h-8 xs:h-9 sm:h-12 md:h-14"
+              className="h-12 xs:h-14 sm:h-16 md:h-20"
             />
           </a>
         </div>
