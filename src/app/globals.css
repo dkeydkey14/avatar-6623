@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #000000;
+  --secondary: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white;
+  }
+}
+
+@layer components {
+  .bg-primary {
+    @apply bg-[var(--primary)];
+  }
+  
+  .text-primary {
+    @apply text-[var(--primary)];
+  }
+  
+  .bg-secondary {
+    @apply bg-[var(--secondary)];
+  }
+  
+  .text-secondary {
+    @apply text-[var(--secondary)];
+  }
+}
+
+/* Animation hiệu ứng nhấp nháy */
+@keyframes blink-effect {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Animation hiệu ứng đổi màu */
+@keyframes color-change {
+  0%, 100% {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    color: #FEB705;
+    text-shadow: 0 0 15px rgba(254, 183, 5, 0.8);
+  }
+}
+
+/* Animation hiệu ứng glow */
+@keyframes glow-effect {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(254, 183, 5, 0.8), 0 0 30px rgba(254, 183, 5, 0.5);
+  }
+}
+
+/* Animation hiệu ứng đổi màu cho nền */
+@keyframes bg-color-shift {
+  0%, 100% {
+    background-color: rgba(28, 28, 28, 0.9);
+  }
+  50% {
+    background-color: rgba(40, 40, 40, 0.9);
+  }
+}
+
+/* Animation arrow blink */
+@keyframes arrow-blink {
+  0%, 100% {
+    border-color: white;
+  }
+  50% {
+    border-color: #FEB705;
+  }
+}
+
+/* Animation line blink */
+@keyframes line-blink {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: #FEB705;
+  }
+}
+
+/* Class animations */
+.title-animation {
+  animation: color-change 2s infinite;
+}
+
+.blink-animation {
+  animation: blink-effect 1.5s infinite;
+}
+
+.glow-animation {
+  animation: color-change 2s infinite;
+}
+
+.bg-animation {
+  animation: bg-color-shift 5s infinite;
+}
+
+.arrow-animation {
+  animation: arrow-blink 1.5s infinite;
+}
+
+.line-animation {
+  animation: line-blink 1.5s infinite;
+}
+
+@keyframes pulse-scale {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.md\:banner-pulse-animation {
+  @media (min-width: 768px) {
+    animation: pulse-scale 2s infinite alternate;
+  }
+}
+
+/* Gradient background for title sections */
+.title-gradient-bg {
+  background: linear-gradient(to bottom, 
+    rgba(20, 20, 20, 0) 0%, 
+    rgba(20, 20, 20, 0.2) 5%,
+    rgba(22, 22, 22, 0.3) 10%,
+    rgba(24, 24, 24, 0.4) 15%,
+    rgba(26, 26, 26, 0.5) 20%,
+    rgba(30, 30, 30, 0.6) 25%,
+    rgba(34, 34, 34, 0.7) 30%,
+    rgba(38, 38, 38, 0.75) 35%,
+    rgba(40, 40, 40, 0.8) 40%,
+    rgba(40, 40, 40, 0.8) 60%,
+    rgba(38, 38, 38, 0.75) 65%,
+    rgba(34, 34, 34, 0.7) 70%,
+    rgba(30, 30, 30, 0.6) 75%,
+    rgba(26, 26, 26, 0.5) 80%,
+    rgba(24, 24, 24, 0.4) 85%,
+    rgba(22, 22, 22, 0.3) 90%,
+    rgba(20, 20, 20, 0.2) 95%,
+    rgba(20, 20, 20, 0) 100%
+  );
+  animation: gradient-pulse 4s infinite alternate;
+}
+
+@keyframes gradient-pulse {
+  0% {
+    background: linear-gradient(to bottom, 
+      rgba(20, 20, 20, 0) 0%, 
+      rgba(20, 20, 20, 0.2) 5%,
+      rgba(22, 22, 22, 0.3) 10%,
+      rgba(24, 24, 24, 0.4) 15%,
+      rgba(26, 26, 26, 0.5) 20%,
+      rgba(30, 30, 30, 0.6) 25%,
+      rgba(34, 34, 34, 0.7) 30%,
+      rgba(38, 38, 38, 0.75) 35%,
+      rgba(40, 40, 40, 0.8) 40%,
+      rgba(40, 40, 40, 0.8) 60%,
+      rgba(38, 38, 38, 0.75) 65%,
+      rgba(34, 34, 34, 0.7) 70%,
+      rgba(30, 30, 30, 0.6) 75%,
+      rgba(26, 26, 26, 0.5) 80%,
+      rgba(24, 24, 24, 0.4) 85%,
+      rgba(22, 22, 22, 0.3) 90%,
+      rgba(20, 20, 20, 0.2) 95%,
+      rgba(20, 20, 20, 0) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(to bottom, 
+      rgba(25, 25, 25, 0) 0%, 
+      rgba(25, 25, 25, 0.2) 5%,
+      rgba(28, 28, 28, 0.3) 10%,
+      rgba(30, 30, 30, 0.4) 15%,
+      rgba(33, 33, 33, 0.5) 20%,
+      rgba(36, 36, 36, 0.6) 25%,
+      rgba(40, 40, 40, 0.7) 30%,
+      rgba(44, 44, 44, 0.75) 35%,
+      rgba(48, 48, 48, 0.8) 40%,
+      rgba(48, 48, 48, 0.8) 60%,
+      rgba(44, 44, 44, 0.75) 65%,
+      rgba(40, 40, 40, 0.7) 70%,
+      rgba(36, 36, 36, 0.6) 75%,
+      rgba(33, 33, 33, 0.5) 80%,
+      rgba(30, 30, 30, 0.4) 85%,
+      rgba(28, 28, 28, 0.3) 90%,
+      rgba(25, 25, 25, 0.2) 95%,
+      rgba(25, 25, 25, 0) 100%
+    );
+  }
+}
+
+@keyframes pulse-scale-avatar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-scale-title {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
